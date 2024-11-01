@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS Customizer</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Text-to-Speech Customizer</h1>
+<h3>By Chathula Wijethunga</h3>
+        <textarea id="text-input" placeholder="Enter your text here..."></textarea>
+
+        <div class="controls">
+            <label for="speed">Speed:</label>
+            <input type="range" id="speed" min="0.1" max="3" step="0.05" value="1">
+
+            <label for="pause-interval">Pause every X words:</label>
+            <input type="number" id="pause-interval" min="1" max="20" value="5">
+
+            <label for="punctuation-pause">Pause after punctuation (sec):</label>
+            <input type="number" id="punctuation-pause" min="0" max="5" step="0.5" value="1">
+        </div>
+
+        <div class="buttons">
+            <button onclick="startTTS()">Start</button>
+            <button onclick="pauseTTS()">Pause</button>
+            <button onclick="resumeTTS()">Resume</button>
+            <button onclick="stopTTS()">Stop</button>
+        </div>
+
+        <p id="highlighted-text"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
